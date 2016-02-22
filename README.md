@@ -3,10 +3,12 @@ Phalcon MVC examples
 
 These are examples of MVC file structures you can employ using Phalcon >= 2.0.x
 
-## Simple
+## Simple 
 This is a very simple MVC structure, it contains one model, two controllers and a view.
 This example does not implement namespaces. Services are defined in public/index.php
 without using Di\\FactoryDefault:
+
+简单的 MVC 结构
 
 ```
 simple
@@ -23,10 +25,12 @@ simple
     └── index.php
 ```
 
-## Simple-Volt
+## Simple-Volt 
 This is a very simple MVC structure, it contains one model, two controllers and a view.
 This example does not implement namespaces. Services are defined in public/index.php
 without using Di\\FactoryDefault. This example uses Volt as template engine:
+
+使用 Volt 作为模板的解析引擎
 
 ```
 simple-volt/
@@ -50,10 +54,12 @@ simple-volt/
     └── index.php
 ```
 
-## Simple-Subcontrollers
+## Simple-Subcontrollers 
 Another very simple MVC structure, it contains one model, three controllers and a view.
 Routes are defined in app/config/routes.php. Some routes point to controllers in a
 subdirectory of controllers/:
+
+把控制器放在 controllers 子目录下
 
 ```
 simple-subcontrollers/
@@ -83,11 +89,13 @@ simple-subcontrollers/
     └── index.php
 ```
 
-## Simple-Without-Application
+## Simple-Without-Application 
 Simple MVC structure without employing Phalcon\\Mvc\\Application.
 This application does not use namespaces. This is an example of
 how you can override Phalcon\\Mvc\\Application by implementing a similar functionality.
 It also defines services without using Di\\FactoryDefault in public/index.php:
+
+完全控制应用的执行步骤：router -> view -> dispatcher -> response -> ...
 
 ```
 simple-without-application/
