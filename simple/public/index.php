@@ -1,8 +1,9 @@
 <?php
-
 use Phalcon\Loader;
+use Phalcon\DI;
 use Phalcon\Mvc\View;
 use Phalcon\Db\Adapter\Pdo\Mysql as Database;
+use Phalcon\Mvc\Application;
 
 /**
  * Very simple MVC structure

@@ -1,5 +1,4 @@
 <?php
-
 use Phalcon\DI;
 use Phalcon\Loader;
 use Phalcon\Mvc\Router;

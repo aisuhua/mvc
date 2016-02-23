@@ -34,6 +34,7 @@ class Application extends BaseApplication
 
 			$router = new Router();
 
+            //设置默认模块为 frontend
 			$router->setDefaultModule("frontend");
 
 			$router->add('/:controller/:action', array(
@@ -44,8 +45,8 @@ class Application extends BaseApplication
 
 			$router->add("/login", array(
 				'module' => 'backend',
-				'controller' => 'login',
-				'action' => 'index',
+                'controller' => 'login',
+                'action' => 'index',
 			));
 
 			$router->add("/admin/products/:action", array(
@@ -64,6 +65,12 @@ class Application extends BaseApplication
 
 		});
 
+        $di->set('url', function () {
+            $url = new \Phalcon\Mvc\Url();
+            $url->setBaseUri ('/mvc/multiple/');
+            return $url;
+        });
+
 		$this->setDI($di);
 	}
 
@@ -72,7 +79,7 @@ class Application extends BaseApplication
 
 		$this->registerServices();
 
-		//Register the installed modules
+		//Register the installed modules 注册多个模块
 		$this->registerModules(array(
 			'frontend' => array(
 				'className' => 'Multiple\Frontend\Module',

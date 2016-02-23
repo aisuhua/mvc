@@ -4,7 +4,7 @@ namespace Multiple\Frontend;
 
 use Phalcon\Loader;
 use Phalcon\Mvc\Dispatcher;
-use Phalcon\Db\Adapter\Pdo\Mysql;
+use Phalcon\Db\Adapter\Pdo\Mysql as Database;
 
 class Module
 {
@@ -34,10 +34,13 @@ class Module
 
 			//Attach a event listener to the dispatcher
 			$eventManager = new \Phalcon\Events\Manager();
-			$eventManager->attach('dispatch', new \Acl('frontend'));
+			//$eventManager->attach('dispatch', new \Phalcon\Mvc\Acl('frontend'));
 
 			$dispatcher->setEventsManager($eventManager);
+
+            //Set Default Namespace
 			$dispatcher->setDefaultNamespace("Multiple\Frontend\Controllers\\");
+
 			return $dispatcher;
 		});
 
@@ -52,9 +55,10 @@ class Module
 			return new Database(array(
 				"host" => "localhost",
 				"username" => "root",
-				"password" => "secret",
+				"password" => "suhua123",
 				"dbname" => "invo"
 			));
 		});
+
 	}
 }

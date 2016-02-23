@@ -36,7 +36,7 @@ class Module
 			return new \Phalcon\Db\Adapter\Pdo\Mysql(array(
 				"host" => "localhost",
 				"username" => "root",
-				"password" => "secret",
+				"password" => "suhua123",
 				"dbname" => "invo"
 			));
 		});

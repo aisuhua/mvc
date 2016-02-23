@@ -23,7 +23,7 @@ class Module
 		$loader->register();
 	}
 
-	public function registerServices(DiInterface $di)
+	public function registerServices($di)
 	{
 
 		/**

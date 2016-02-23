@@ -32,7 +32,7 @@ class Module implements ModuleDefinitionInterface
 	 *
 	 * @param Phalcon\DI $di
 	 */
-	public function registerServices(DiInterface $di)
+	public function registerServices($di)
 	{
 
 		/**

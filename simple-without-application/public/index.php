@@ -1,8 +1,8 @@
 <?php
 
-use Phalcon\Di;
+use Phalcon\DI;
 use Phalcon\Loader;
-use Phalcon\Db\Adapter\Pdo\Mysql;
+use Phalcon\Db\Adapter\Pdo\Mysql as Database;
 
 /**
  * Very simple MVC structure
@@ -17,7 +17,7 @@ $loader->registerDirs(array(
 
 $loader->register();
 
-$di = new Di();
+$di = new DI();
 
 //Registering a router
 $di->set('router', 'Phalcon\Mvc\Router');

@@ -2,6 +2,7 @@
 
 error_reporting(E_ALL);
 
+use Phalcon\Loader;
 use Phalcon\DI\FactoryDefault;
 use Phalcon\Mvc\View as View;
 use Phalcon\Mvc\Url as UrlResolver;

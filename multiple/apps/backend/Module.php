@@ -50,7 +50,7 @@ class Module
 			return new Database(array(
 				"host" => "localhost",
 				"username" => "root",
-				"password" => "secret",
+				"password" => "suhua123",
 				"dbname" => "invo"
 			));
 		});
