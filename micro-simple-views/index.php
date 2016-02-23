@@ -16,8 +16,8 @@ $app->notFound(function () use ($app) {
     echo $app['view']->render('404');
 });
 
-$app->error(function () use ($app) {
-    echo $app['view']->render('500');
-});
+//$app->error(function () use ($app) {
+//    echo $app['view']->render('500');
+//});
 
 $app->handle();

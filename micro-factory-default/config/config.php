@@ -10,7 +10,7 @@ return new \Phalcon\Config(array(
 	),
 	'application' => array(
 		'modelsDir'      => __DIR__ . '/../models/',
-		'baseUri'        => '/micro-factory-default/',
+		'baseUri'        => '/mvc/micro-factory-default/',
 	),
 	'models' => array(
 		'metadata' => array(
